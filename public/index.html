@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="styles.css" rel="stylesheet">
+    
+    <style>
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .sliders {
+            position: relative;
+            width: 100%;
+        }
+
+        .sliders button {
+            position: absolute;
+            top: 40%;
+            font-size: 4rem;
+            color: teal;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+
+        }
+
+        @media (max-width: 600px) {
+            .prev {
+                left: 0;
+            }
+
+            .next {
+                right: 0;
+            }
+
+            .sliders button {
+                margin-left: 0;
+            }
+
+            .sliders button {
+                margin-right: 0;
+            }
+
+            .sliders button {
+                top: 50%
+            }
+
+            .sliders button {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div> <!--wrapper-->
+        <div class="flex justify-evenly md:grid md:grid-cols-3 pt-2"> <!--top segment-->
+            <div class="ml-5 mt-2 flex justify-start">
+                <img src="Images/Untitled design3.png" alt="" class="h-12 w-12 sm:h-14 sm:w-14 lg:h-16 lg:w-16">
+            </div>
+            <div class="text-center ">
+                <!--title-->
+                <span class="text-2xl lg:text-4xl text-blue-800 font-semibold ">PhysioCare</span>
+                <span class="text-2xl lg:text-4xl text-teal-500 font-semibold ">Network</span>
+                <div class="text-center">
+                    <!--subtitle-->
+                    <span class="text-sm sm:text-base lg:text-lg text-gray-400">Making you better</span>
+                </div>
+            </div>
+            <div class="hidden md:flex flex-row justify-end items-center"> <!--icons-->
+                <img class="icons" src="images/59439.png" alt="icon">
+                <img class="icons" src="images/Black-Instagram-Logo-Transparent.png" alt="icon">
+                <img class="icons" src="images/64be60d72112bdfca69a01f0.png" alt="icon">
+            </div>
+            <div class="flex flex-col justify-end absolute top-3/4 transform translate-y-2/3 right-5 md:hidden mt-6">
+                <!-- Icons -->
+                <img class="icons w-7 h-7 mr-4 bg-white" src="images/59439.png" alt="icon">
+                <img class="icons w-7 h-7 mr-4 bg-white" src="images/Black-Instagram-Logo-Transparent.png"
+                    alt="icon">
+                <img class="icons w-7 h-7 bg-w bg-white" src="/public/images/64be60d72112bdfca69a01f0.png" alt="icon">
+            </div>
+        </div>
+
+        <div class="text-white mt-4 sticky top-0 z-20"> <!--nav start-->
+            <nav class="bg-gradient-to-l from-teal-500 to-blue-900 ">
+                <div class="grid grid-cols-2 lg:grid-cols-9 items-center"> <!--links-->
+                    <div class="flex lg:items-center text-4xl m-5 font-bold tracking-wider">
+                        <h3>P.C.N</h3>
+                    </div>
+                    <div class="cursor-pointer lg:hidden flex justify-end p-5" id="burger">
+                        <img src="images/130921.png" alt="burgerImage" class="w-7 h-7">
+                    </div>
+                    <div class="lg:flex lg:col-span-6">
+                        <ul class=" hidden lg:flex items-center justify-around  w-full mx-3" id="menu">
+                            <li class="p-4 lg:p-7 hover:bg-white hover:text-gray-800 transition ease-out duration-500">
+                                <a href="#myHome">Home</a>
+                            </li>
+                            <li class="p-4 lg:p-7 hover:bg-white hover:text-gray-800 transition ease-out duration-500">
+                                <a href="#myAbout">About</a>
+                            </li>
+                            <li class="p-4 lg:p-7 hover:bg-white hover:text-gray-800 transition ease-out duration-500">
+                                <a href="#myServices">Services</a>
+                            </li>
+                            <li class="p-4 lg:p-7 hover:bg-white hover:text-gray-800 transition ease-out duration-500">
+                                <a href="#myClinics">Clinics</a>
+                            </li>
+                            <li class="p-4 lg:p-7 hover:bg-white hover:text-gray-800 transition ease-out duration-500">
+                                <a href="#myComm">Community</a>
+                            </li>
+                            <li class="p-4 lg:p-7 hover:bg-white hover:text-gray-800 transition ease-out duration-500">
+                                <a href="#myContact">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="lg:col-span-2 lg:flex justify-end lg:items-center mr-5 absolute top-0  right-5 p-5">
+                        <!--log in-->
+                        <a href="#"
+                            class="underline sm:text-base text-white uppercase tracking-wider transform hover:scale-125 hover:bg-opacity-50 transition ease-out duration-300">Log
+                            In</a>
+                        <a href="#"
+                            class="ml-5 border-2 sm:text-base border-rounded rounded-3xl p-2 border-white bg-teal text-white uppercase hover:bg-white hover:border-teal hover:text-gray-500 transition ease-out duration-500">Sign
+                            Up</a>
+                    </div>
+
+                </div>
+            </nav>
+        </div> <!--Nav end-->
+        <main id="myHome">
+            <div class="h-screen bg-fixed bg-center bg-cover"
+                style="background-image: url('images/mr-lee-f4RBYsY2hxA-unsplash.jpg');">
+                <div class="flex items-center justify-center h-full bg-black bg-opacity-50">
+                    <div class="text-center mt-8">
+                        <h2 class="text-3xl md:text-4xl text-white font-bold">Welcome to PhysioCare Network</h2>
+                        <h2 class="text-lg text-white font-semibold">Connecting you to top physiotherapy resources</h2>
+                        <!-- Buttons Section -->
+                        <div class="mt-6 space-x-4">
+                            <a href="#"
+                                class="inline-block py-3 px-6 bg-blue-900 text-white font-semibold rounded-full hover:bg-blue-700 hover:text-white transition-colors duration-300">
+                                Get Started
+                            </a>
+                            <a href="#"
+                                class="inline-block py-3 px-6 py-2 border border-white text-white font-semibold rounded-full hover:bg-white hover:text-teal-700 transition-colors duration-300">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        <div id="myAbout">
+            <section class="py-16 px-4 bg-white">
+                <div class="flex flex-col md:flex-row">
+                    <!-- About -->
+                    <div class="md:w-1/2 px-8 py-4 text-center">
+                        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-teal-500 mb-8">About Us</h2>
+                        <p class="text-lg text-gray-700 mb-4">
+                            Our platform is dedicated to connecting physiotherapists, patients, and healthcare
+                            facilities, creating a comprehensive resource for all things related to physical therapy. We
+                            aim to support physiotherapists with a space to share, download, and exchange exercise
+                            programs and resources. Hospitals can showcase their services and vacancies.
+                        </p>
+                        <p class="text-lg text-gray-700">
+                            For patients, our platform offers easy appointment booking, access to recommended exercises,
+                            and physiotherapy
+                        </p>
+                        <div class="m-7">
+                            <a href="#"
+                                class="bg-blue-900 text-white font-semibold rounded-full hover:bg-teal-500 hover:text-white transition-colors duration-300 p-3">Read
+                                More</a>
+                        </div>
+                    </div>
+
+                    <div class="hidden md:block w-px bg-gray-300 mx-4"></div>
+
+                    <div class="md:w-1/2 px-8 py-4 text-center">
+                        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-900 mb-8">Our Mission</h2>
+                        <p class="text-lg text-gray-700 mb-4">
+                            Our mission is to provide comprehensive and compassionate care that focuses on the physical,
+                            mental, and emotional well-being of our patients. We aim to empower individuals to reach
+                            their full potential, recover from injuries, and live their best life with confidence.
+                        </p>
+                        <p class="text-lg text-gray-700 mb-4">
+                            We believe in a patient-centered approach to healthcare, where everyone can find reliable
+                            resources, professional guidance, and opportunities for physical rehabilitation and growth.
+                        </p>
+                        <div class="m-7">
+                            <a href="#"
+                                class="bg-teal-500 text-white font-semibold rounded-full hover:bg-blue-900 hover:text-white transition-colors duration-300 p-3">Read
+                                More</a>
+                        </div>
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+
+
+        <div class="bg-gray-100" id="myServices">
+            <section class=" py-12 px-4 text-center m-5">
+                <h1 class="text-4xl font-bold text-blue-900 mb-4">Services</h1>
+                <p class="text-gray-400 max-w-lg mx-auto">Explore the wide range of services we offer.</p>
+            </section>
+            <section class="py-10 px-4 mb-10 mx-2 lg:mx-7">
+                <div class="grid grid-cols-1 md:grid-rows-2 md:grid-cols-3">
+                    <!-- Service Card -->
+                    <div class="bg-gray-50 rounded-md shadow-lg transition-shadow m-5">
+                        <div class=" mb-4 w-full ">
+                            <img src="images/mr-lee-f4RBYsY2hxA-unsplash.jpg"
+                                class="h-60 w-full rounded-b-none rounded-t-md object-cover" alt="">
+                        </div>
+                        <h2 class="text-xl font-semibold text-teal-500 mb-2 pl-3">Profile</h2>
+                        <p class="text-gray-500 pl-3">Manage your account.</p>
+                        <a href="signUp.html" class="mt-4 inline-block text-blue-600 hover:underline pl-3 pb-5">Sign up / Log
+                            in</a>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-md shadow-lg transition-shadow m-5">
+                        <div class="w-full mb-4">
+                            <img src="images/mr-lee-f4RBYsY2hxA-unsplash.jpg"
+                                class="h-60 w-full object-cover rounded-b-none rounded-t-md" alt="">
+                        </div>
+                        <h2 class="text-xl font-semibold text-teal-500 mb-2 pl-3">Appointments</h2>
+                        <p class="text-gray-500 pl-3">Get to plan your meetings.</p>
+                        <a href="#" class="mt-4 inline-block text-blue-600 hover:underline pl-3 pb-5">Book</a>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-md shadow-lg transition-shadow m-5">
+                        <div class="w-full mb-4 ">
+                            <img src="images/mr-lee-f4RBYsY2hxA-unsplash.jpg"
+                                class="h-60 w-full object-cover rounded-b-none rounded-t-md" alt="">
+                        </div>
+                        <h2 class="text-xl font-semibold text-teal-500 mb-2 pl-3">Exercise Library</h2>
+                        <p class="text-gray-500 pl-3">Download exercises.</p>
+                        <a href="#" class="mt-4 inline-block text-blue-600 hover:underline pl-3 pb-5">Start</a>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-md shadow-lg transition-shadow m-5">
+                        <div class="w-full mb-4">
+                            <img src="images/mr-lee-f4RBYsY2hxA-unsplash.jpg"
+                                class="h-60 w-full object-cover rounded-md" alt="">
+                        </div>
+                        <h2 class="text-xl font-semibold text-teal-500 mb-2 pl-3">Resources</h2>
+                        <p class="text-gray-500 pl-3">articles and news available</p>
+                        <a href="#" class="mt-4 inline-block text-blue-600 hover:underline pl-3 pb-5">Learn More</a>
+                    </div>
+
+
+                    <div class="bg-gray-50 rounded-md shadow-lg transition-shadow m-5">
+                        <div class="w-full mb-4">
+                            <img src="images/mr-lee-f4RBYsY2hxA-unsplash.jpg"
+                                class="h-60 w-full object-cover rounded-b-none rounded-t-md" alt="">
+                        </div>
+                        <h2 class="text-xl font-semibold text-teal-500 mb-2 pl-3">Progress</h2>
+                        <p class="text-gray-500 pl-3">Track your progress.</p>
+                        <a href="#" class="mt-4 inline-block text-blue-600 hover:underline pb-5 pl-3">Start</a>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-md shadow-lg transition-shadow m-5">
+                        <div class="w-full mb-4">
+                            <img src="images/mr-lee-f4RBYsY2hxA-unsplash.jpg"
+                                class="h-60 w-full object-cover rounded-b-none rounded-t-md" alt="">
+                        </div>
+                        <h2 class="text-xl font-semibold text-teal-500 mb-2 pl-3">Vacancies</h2>
+                        <p class="text-gray-500 pl-3">Post or search for vacant positions.</p>
+                        <a href="#" class="mt-4 inline-block text-blue-600 hover:underline pb-5 pl-3">Start</a>
+                    </div>
+
+
+                </div>
+            </section>
+        </div>
+
+        <section id="myClinics" class="mt-12">
+            <div>
+                <h1 class="text-4xl font-bold text-blue-900 m-6 text-center">Clinics</h1>
+                <p class="text-gray-400 max-w-lg mx-auto text-center">Get Information about clinics offering Physical
+                    therapy services.</p>
+            </div>
+            <section class="flex justify-center items-center m-3">
+                <div class="inline-block text-center bg-white mt-6 border-2 p-5 border-gray-200">
+
+                    <div
+                        class="flex flex-col md:flex-row items-center justify-start md:gap-4 my-5 p-2 cursor-pointer hover:bg-blue-100/50 text-teal-600 hover:text-black">
+                        <img src="images/jonathan-borba-lrQPTQs7nQQ-unsplash.jpg" alt=""
+                            class="h-28 md:w-28 sm:w-full object-cover">
+                        <div class="flex flex-col justify-center items-center">
+                            <h2 class="text-2xl md:text-3xl font-semibold p-3">Mend and move</h2>
+                            <h3 class="text-lg p-2 text-gray-400">Located in Westlands kipro centre, second floor</h3>
+                        </div>
+
+                    </div>
+                    <div
+                        class="flex flex-col md:flex-row items-center justify-start md:gap-4 my-5 p-2 cursor-pointer hover:bg-blue-100/50 hover:text-black">
+                        <img src="images/alexander-redl-d3bYmnZ0ank-unsplash.jpg" alt=""
+                            class="h-28 md:w-28 sm:w-full object-cover">
+                        <div class="flex flex-col justify-center items-center">
+                            <h2 class="text-2xl md:text-3xl font-semibold p-3 text-teal-600">Physio Hub</h2>
+                            <h3 class="text-lg p-2 text-gray-400">Located in Eastleigh Business Bay centre, ground floor
+                            </h3>
+                        </div>
+
+                    </div>
+                    <div
+                        class="flex flex-col md:flex-row items-center justify-start md:gap-4 my-5 p-2 cursor-pointer hover:bg-blue-100/50 hover:text-black">
+                        <img src="images/bruce-mars-gJtDg6WfMlQ-unsplash.jpg" alt=""
+                            class="h-28 md:w-28 sm:w-full object-cover">
+                        <div class="flex flex-col justify-center items-center">
+                            <h2 class="text-2xl md:text-3xl font-semibold p-3 text-teal-600">Fitness Center</h2>
+                            <h3 class="text-lg p-2 text-gray-400">Located in Parklands, opposite shell petrol station
+                            </h3>
+                        </div>
+
+                    </div>
+                    <div class="flex items-center justify-center m-3">
+                        <a href="#"
+                            class="bg-blue-900 text-white font-semibold rounded-full hover:bg-blue-700 hover:text-white transition-colors duration-300 p-3">View
+                            More</a>
+
+                    </div>
+
+                </div>
+            </section>
+
+
+        </section>
+
+        <section id="myComm" class="mt-10">
+            <div>
+                <h1 class="text-4xl font-bold text-blue-900 mt-10 text-center">Our Community</h1>
+                <p class="text-gray-400 max-w-lg mx-auto text-center m-3">Explore:</p>
+
+            </div>
+            <div class="grid grid-rows-1 m-3">
+                <div class="grid md:grid-cols-3 flex items-center justify-center">
+                    <div class="flex items-center justify-center text-center cursor-pointer">
+                        <span
+                            class="bg-orange-500 p-7 rounded-md text-white m-3 text-2xl md:text-3xl w-full md:w-80 hover:bg-orange-400">Community
+                            Forum</span>
+                    </div>
+                    <div class="flex items-center justify-center text-center cursor-pointer">
+                        <span
+                            class="bg-blue-500 p-7 rounded-md text-white m-3 text-2xl md:text-3xl w-full md:w-80 hover:bg-blue-400">Resource
+                            Library</span>
+                    </div>
+                    <div class="flex items-center justify-center text-center cursor-pointer">
+                        <span
+                            class="bg-red-600 p-7 rounded-md text-white m-3 text-2xl md:text-3xl w-full md:w-80 hover:bg-red-400">
+                            Blog and News</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <section>
+                <div class="bg-gray-100 py-16 sliders my-10 ">
+                    <h2 class="text-3xl font-bold text-center text-teal-600 mb-10">Happy Clients</h2>
+                    <div class="max-w-2xl space-y-8 mx-7 md:mx-auto">
+                        <div class="bg-white p-6 rounded-lg shadow-lg slide">
+                            <p class="text-gray-700">"PhysioCare Network helped me regain mobility after my injury.
+                                Their team is amazing!"</p>
+                            <p class="mt-4 font-semibold text-teal-500">- Sarah T., New York</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-lg slide">
+                            <p class="text-gray-700">"PhysioCare Network is one of the best. i love their services!"</p>
+                            <p class="mt-4 font-semibold text-teal-500">- Jonh M., Britain</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-lg slide">
+                            <p class="text-gray-700">"PhysioCare Network is all i could ever ask for. One in a million!"
+                            </p>
+                            <p class="mt-4 font-semibold text-teal-500">- Maryann, Germany</p>
+                        </div>
+                        <div class="">
+                            <button class="prev" onclick="prevSlide()">&#10094</button>
+                            <button class="next" onclick="nextSlide()">&#10095 </button>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 p-8 mt-12">
+                <div class="flex flex-col justify-center items-center md:items-start text-center md:text-left">
+                    <h2 class="text-3xl font-semibold text-blue-900">Why Choose Us?</h2>
+                    <p class="mt-4 text-gray-600 max-w-lg">We are dedicated to providing you with top-notch
+                        physiotherapy care tailored to your needs.</p>
+                </div>
+
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="flex flex-col items-center text-center">
+                        <img src="/public/images/mr-lee-f4RBYsY2hxA-unsplash.jpg" alt="Icon 1" class="w-16 h-16 mb-2">
+                        <h3 class="text-lg font-semibold text-teal-500">Personalized Care</h3>
+                        <p class="text-gray-500 text-sm">Tailored plans for optimal recovery.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <img src="/public/images/jonathan-borba-lrQPTQs7nQQ-unsplash.jpg" alt="Icon 2"
+                            class="w-16 h-16 mb-2">
+                        <h3 class="text-lg font-semibold text-teal-500">Experienced Team</h3>
+                        <p class="text-gray-500 text-sm">Licensed professionals you can trust.</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section id="myContact">
+            <div class="bg-blue-900 text-white py-16">
+                <section class="flex justify-center items-center m-6">
+                    <div class="inline-block text-center bg-white">
+                        <div class="grid grid-cols-1 md:grid-cols-2">
+                            <div class="bg-teal-500 p-6 flex flex-col justify-center items-center">
+                                <h2 class="text-3xl tracking-wider font-bold p-4">Let's Chat</h2>
+                                <p class="p-4 font-semibold">Whether you have a question, a concern or simply want to
+                                    connect.</p>
+                                <p class="p-4 font-semibold">Feel free to send us a message in the contact form</p>
+                               
+                            </div>
+                            <div class="flex flex-col justify-center items-center">
+                                <h2 class="text-gray-700 font-bold text-4xl m-6">Contact</h2>
+                                <div>
+                                    <form action="#" class="flex flex-col text-black">
+                                        <input type="text" id="myName" class="bg-gray-300 p-3 m-3" placeholder="Name*">
+                                        <br>
+                                        <input type="text" id="myEmail" class="bg-gray-300 p-3 m-3"
+                                            placeholder="Email*">
+                                        <br>
+                                        <input type="number" id="myNumber" class="bg-gray-300 p-3 m-3"
+                                            placeholder="Number*">
+                                        <br>
+                                        <textarea id="myMessage" cols="10" rows="5" placeholder="Message*"
+                                            class="bg-gray-300 p-3 m-3"></textarea>
+                                        <br>
+                                        <a href="#"
+                                            class="bg-teal-500 text-white font-semibold rounded-full hover:bg-teal-700 hover:text-white transition-colors duration-300 p-3 m-3">Submit</a>
+
+                                    </form>
+                                   
+                                </div>
+
+                            </div>
+                            
+
+                        </div>
+
+
+                    </div>
+                </section>
+
+                <div class="max-w-lg mx-auto text-center m-10">
+                    <h2 class="text-3xl font-bold mb-4">Stay Updated</h2>
+                    <p class="text-gray-300 mb-6">Get the latest news, events, and health tips from PhysioCare Network.
+                    </p>
+                    <form action="#" method="post" class="flex flex-col sm:flex-row justify-center">
+                        <input type="email" placeholder="Your email address"
+                            class="p-3 rounded-md mb-4 sm:mb-0 sm:mr-4 text-gray-900 focus:outline-none mx-3">
+                        <button type="submit"
+                            class="px-6 py-3 bg-teal-500 rounded-md hover:bg-teal-600 transition-colors mx-3">Subscribe</button>
+                    </form>
+                </div>
+
+                <div class="flex flex-row justify-center items-center"> <!--icons-->
+                    <img class="icons bg-white" src="/public/images/59439.png" alt="">
+                    <img class="icons bg-white" src="/public/images/Black-Instagram-Logo-Transparent.png" alt="">
+                    <img class="icons bg-white" src="/public/images/64be60d72112bdfca69a01f0.png" alt="">
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <script src="/public/script.js"></script>
+</body>
+
+</html>
